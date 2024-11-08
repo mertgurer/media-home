@@ -7,7 +7,7 @@ import React, { useEffect, useState } from "react";
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
-    const [activeSection, setActiveSection] = useState<string>("");
+    const [activeSection, setActiveSection] = useState<string>("welcome");
 
     useEffect(() => {
         const handleScroll = () => {
@@ -17,7 +17,11 @@ const Navbar = () => {
                 const element = document.getElementById(section);
                 if (element) {
                     const rect = element.getBoundingClientRect();
-                    if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+                    const elementHalfInView = rect.top + rect.height / 2;
+                    if (
+                        elementHalfInView >= 0 &&
+                        elementHalfInView <= window.innerHeight
+                    ) {
                         setActiveSection(section);
                         break;
                     }

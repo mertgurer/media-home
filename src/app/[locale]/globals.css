@@ -6,16 +6,16 @@
     /* light values */
     --background-light: #d6dbdc;
     --primary-light: #11389a;
-    --secondary-light: #000000;
-    --tertiary-light: #000000;
-    --text-light: #000000;
+    --secondary-light: #538083;
+    --tertiary-light: #7e9ff1;
+    --text-light: #0d090a;
 
     /* dark values */
     --background-dark: #d6dbdc;
     --primary-dark: #11389a;
-    --secondary-dark: #000000;
-    --tertiary-dark: #000000;
-    --text-dark: #000000;
+    --secondary-dark: #538083;
+    --tertiary-dark: #7e9ff1;
+    --text-dark: #0d090a;
 
     /* initiate light values */
     --background: var(--background-light);
