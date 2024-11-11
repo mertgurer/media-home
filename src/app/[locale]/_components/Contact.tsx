@@ -5,6 +5,7 @@ import { EMAIL_JS, REGEX } from "@/constants/constants";
 import Input from "@/components/input/input";
 import { Send } from "lucide-react";
 import emailjs from "@emailjs/browser";
+import "./styles.css";
 
 const Contact = () => {
     const [loading, setLoading] = useState(false);
@@ -108,7 +109,7 @@ const Contact = () => {
         <section
             id={HomePageSectionIds.CONTACT}
             ref={formRef}
-            className="flex flex-col w-full items-center px-16 py-12 rounded-md bg-background max-md:px-0"
+            className="flex flex-col w-full items-center px-16 py-12 rounded-md bg-background gap-10 max-md:px-0"
         >
             <motion.p
                 animate={isInView ? "shown" : "hidden"}
@@ -120,85 +121,87 @@ const Contact = () => {
                 }}
                 className="font-medium text-center text-4xl tracking-wide max-md:text-3xl"
             >
-                İletişime Geçin
+                - İletişime Geçin -
             </motion.p>
-            <form
-                noValidate
-                onSubmit={send}
-                className="flex flex-col items-center w-2/3"
-            >
-                <div className="grid grid-rows-[1fr_5fr] gap-6 w-full max-md:gap-4 max-md:grid-rows-2">
-                    <div className="flex gap-6 max-md:flex-col max-md:gap-4">
+            <div className="flex w-full px-[20%] gap-10">
+                <form
+                    noValidate
+                    onSubmit={send}
+                    className="flex flex-col items-center w-full"
+                >
+                    <div className="grid grid-rows-[1fr_5fr] gap-4 w-full max-md:gap-4 max-md:grid-rows-2">
+                        <div className="flex gap-4 max-md:flex-col max-md:gap-4">
+                            <motion.div
+                                animate={isInView ? "shown" : "hidden"}
+                                initial="hidden"
+                                variants={inputVariants(0)}
+                                className="w-full"
+                            >
+                                <Input
+                                    id="nameSurname"
+                                    title="İsim Soyisim*"
+                                    inline
+                                    dark
+                                />
+                            </motion.div>
+                            <motion.div
+                                animate={isInView ? "shown" : "hidden"}
+                                initial="hidden"
+                                variants={inputVariants(1)}
+                                className="w-full"
+                            >
+                                <Input
+                                    id="email"
+                                    title="E-posta*"
+                                    type="email"
+                                    inline
+                                    dark
+                                />
+                            </motion.div>
+                            <motion.div
+                                animate={isInView ? "shown" : "hidden"}
+                                initial="hidden"
+                                variants={inputVariants(2)}
+                                className="w-full"
+                            >
+                                <Input id="subject" title="Konu" inline dark />
+                            </motion.div>
+                        </div>
                         <motion.div
                             animate={isInView ? "shown" : "hidden"}
                             initial="hidden"
                             variants={inputVariants(0)}
-                            className="w-full"
+                            className="flex w-full"
                         >
                             <Input
-                                id="nameSurname"
-                                title="Contact.name"
-                                inline
-                                dark
-                            />
-                        </motion.div>
-                        <motion.div
-                            animate={isInView ? "shown" : "hidden"}
-                            initial="hidden"
-                            variants={inputVariants(1)}
-                            className="w-full"
-                        >
-                            <Input
-                                id="email"
-                                title="Contact.email"
-                                type="email"
-                                inline
-                                dark
-                            />
-                        </motion.div>
-                        <motion.div
-                            animate={isInView ? "shown" : "hidden"}
-                            initial="hidden"
-                            variants={inputVariants(2)}
-                            className="w-full"
-                        >
-                            <Input
-                                id="subject"
-                                title="Contact.subject"
+                                id="message"
+                                title="Mesaj*"
+                                type="textarea"
                                 inline
                                 dark
                             />
                         </motion.div>
                     </div>
-                    <motion.div
+                    <motion.button
+                        type="submit"
                         animate={isInView ? "shown" : "hidden"}
                         initial="hidden"
-                        variants={inputVariants(0)}
-                        className="flex w-full"
+                        variants={buttonVariants}
+                        disabled={loading}
+                        style={{
+                            color: "var(--text)",
+                            backgroundColor:
+                                "color-mix(in srgb, var(--primary), transparent 50%)",
+                        }}
+                        className={`flex relative items-center gap-2 w-max font-medium text-background py-[12px] px-12 rounded-md mt-8 shadow-[0_0_22px_-10px] shadow-secondary sendButton max-md:text-base ${
+                            loading ? "opacity-60" : "opacity-100"
+                        }`}
                     >
-                        <Input
-                            id="message"
-                            title="Contact.message"
-                            type="textarea"
-                            inline
-                            dark
-                        />
-                    </motion.div>
-                </div>
-                <motion.button
-                    type="submit"
-                    animate={isInView ? "shown" : "hidden"}
-                    initial="hidden"
-                    variants={buttonVariants}
-                    disabled={loading}
-                    className={`flex relative items-center gap-2 w-max bg-secondary font-medium text-background py-[12px] px-9 rounded-md mt-8 shadow-[0_0_22px_-10px] shadow-secondary sendButton max-md:text-base ${
-                        loading ? "opacity-60" : "opacity-100"
-                    }`}
-                >
-                    Gönder
-                    <Send size={18} strokeWidth={1.75} />
-                </motion.button>
-            </form>
+                        Gönder
+                        <Send size={18} strokeWidth={1.75} />
+                    </motion.button>
+                </form>
+            </div>
         </section>
     );
 };

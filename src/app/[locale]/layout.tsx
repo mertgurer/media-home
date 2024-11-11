@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
+import Footer from "@/components/footer/Footer";
 
 const poppins = Quicksand({
     subsets: ["latin"],
@@ -33,6 +34,7 @@ export default async function RootLayout({
                 <NextIntlClientProvider messages={messages}>
                     <Navbar />
                     {children}
+                    <Footer />
                 </NextIntlClientProvider>
             </body>
         </html>

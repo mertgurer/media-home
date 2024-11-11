@@ -1,0 +1,33 @@
+.sendButton {
+    transition: all 500ms ease-out;
+}
+
+.sendButton:hover {
+    transform: scaleX(0.95) scaleY(0.9) !important;
+}
+
+.sendButton:active {
+    transform: scaleX(0.95) scaleY(0.9) translateY(4px) !important;
+}
+
+.sendButton::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border: 2px solid color-mix(in srgb, var(--primary), transparent 50%);
+    border-radius: 6px;
+    z-index: -1;
+
+    transition: all 500ms ease-out;
+}
+
+.sendButton:hover::before {
+    transform: scaleX(1.07) scaleY(1.3);
+}
+
+.sendButton:active::before {
+    transform: scaleX(1.05) scaleY(1.3) translateY(-1px);
+}

@@ -41,25 +41,20 @@ export default function Input({
                     name={id}
                     type={hidden ? type : ""}
                     style={{
-                        color: bright
-                            ? "var(--accent)"
-                            : !dark
-                            ? "var(--background)"
-                            : "var(--text)",
-                        backgroundColor: !dark
-                            ? "var(--text)"
-                            : "color-mix(in srgb, var(--primary), transparent 7%)",
+                        color: "var(--text)",
+                        backgroundColor:
+                            "color-mix(in srgb, var(--primary), transparent 50%)",
                     }}
-                    className={`rounded-md text-sm font-light no-spinner ${
+                    className={`rounded-md text-sm font-semibold no-spinner placeholder-gray-700 bg-secondary ${
                         leftElement ? "ps-12" : undefined
                     } ${type === "password" ? "pr-10" : ""} ${
                         !inline ? "py-[10px] px-5" : "py-4 px-6"
                     } ${disabled ? "opacity-60" : ""}`}
                     placeholder={
                         inline
-                            ? t(title, translationProps)
+                            ? title
                             : placeholder
-                            ? t(placeholder, translationProps)
+                            ? placeholder
                             : type === "email"
                             ? "email@example.com"
                             : ""
@@ -71,15 +66,14 @@ export default function Input({
                 <textarea
                     name={id}
                     style={{
-                        color: !dark ? "var(--background)" : "var(--text)",
-                        backgroundColor: !dark
-                            ? "var(--text)"
-                            : "color-mix(in srgb, var(--primary), transparent 7%)",
+                        color: "var(--pr)",
+                        backgroundColor:
+                            "color-mix(in srgb, var(--primary), transparent 50%)",
                     }}
-                    className={`h-full rounded-md text-sm font-light ${
+                    className={`h-full rounded-md text-sm font-semibold placeholder-gray-700 bg-secondary ${
                         !inline ? "py-[10px] px-5" : "py-4 px-6"
                     }`}
-                    placeholder={inline ? t(title) : ""}
+                    placeholder={inline ? title : ""}
                     maxLength={1024}
                 />
             )}

@@ -21,7 +21,7 @@ const Welcome = () => {
             <div
                 style={{
                     backgroundColor:
-                        "color-mix(in srgb, var(--background), transparent 80%)",
+                        "color-mix(in srgb, var(--primary), transparent 80%)",
                 }}
                 className="flex flex-col w-1/3 mr-[30%] backdrop-blur-lg px-10 py-8 rounded-lg gap-4"
             >
