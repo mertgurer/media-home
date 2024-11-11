@@ -7,7 +7,7 @@ const About = () => {
             id={HomePageSectionIds.ABOUT}
             className="w-full flex items-center justify-center bg-background pt-20 pb-24 shadow-[0_0_22px_-10px] shadow-black z-10"
         >
-            <div className="w-2/3 flex flex-col items-center gap-4">
+            <div className="w-2/3 flex flex-col items-center gap-4 max-md:w-[92%] max-md:text-center">
                 <p className="text-4xl text-center font-semibold mb-4">
                     - Hakkımızda -
                 </p>
@@ -42,7 +42,7 @@ const About = () => {
                         lider konumumuzu pekiştiriyoruz.
                     </p>
                 </div>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-2 gap-4 max-md:flex max-md:flex-col">
                     <div
                         style={{
                             backgroundColor:

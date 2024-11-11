@@ -14,10 +14,10 @@ const Card = ({ title, description, image, active }: CarouselCardProps) => {
                     active ? "opacity-100" : "opacity-0"
                 } transition-opacity duration-300`}
             >
-                <p className="text-3xl font-semibold text-center text-balance text-tertiary">
+                <p className="text-3xl font-semibold text-center text-balance text-tertiary max-md:text-2xl max-md:px-2">
                     {title}
                 </p>
-                <p className=" font-semibold text-xl text-center text-balance text-background mt-5 leading-5 px-10 mb-[20%]">
+                <p className=" font-semibold text-xl text-center text-balance text-background mt-5 leading-5 px-10 mb-[20%] max-md:text-base max-md:leading-4 max-md:mb-[10%]">
                     {description}
                 </p>
             </div>

@@ -4,10 +4,12 @@ import { HomePageSectionIds, HomePageSections } from "@/data/homePageSections";
 import { Link } from "@/i18n/routing";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import BurgerMenu from "./components/burgerMenu";
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const [activeSection, setActiveSection] = useState<string>("welcome");
+    const [open, setOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -43,13 +45,13 @@ const Navbar = () => {
 
     return (
         <div
-            className={`w-full h-20 fixed z-30 flex items-center justify-between px-44 bg-background duration-300 ${
+            className={`w-full h-20 fixed z-30 flex items-center justify-between px-44 bg-background duration-300 max-md:shadow-lg max-md:px-4 ${
                 scrolled ? "shadow-lg" : ""
             }`}
         >
             <Link
                 href={"/"}
-                className="h-3/4 relative aspect-[3] overflow-hidden"
+                className="h-3/4 relative aspect-[3] overflow-hidden max-md:h-2/3"
             >
                 <Image
                     className="object-contain"
@@ -60,7 +62,16 @@ const Navbar = () => {
                     priority
                 />
             </Link>
-            <div className="flex gap-7">
+
+            <div
+                style={{
+                    backgroundColor:
+                        "color-mix(in srgb, var(--text), transparent 20%)",
+                }}
+                className={`flex gap-7 z-10 max-md:flex-col max-md:absolute max-md:top-0 max-md:left-0 max-md:w-full max-md:opacity-90 max-md:backdrop-blur-lg max-md:gap-5 max-md:pb-20 max-md:pt-32 max-md:z-30 max-md:duration-500 ${
+                    open ? "translate-y-0" : "-translate-y-full"
+                }`}
+            >
                 {Object.values(HomePageSections).map((section) => (
                     <button
                         key={section.id}
@@ -69,7 +80,7 @@ const Navbar = () => {
                                 .getElementById(section.id)
                                 ?.scrollIntoView({ behavior: "smooth" });
                         }}
-                        className={`font-semibold duration-300 hover:text-primary ${
+                        className={`font-semibold duration-300 hover:text-primary max-md:text-background max-md:text-2xl ${
                             activeSection === section.id ? "text-primary" : ""
                         }`}
                     >
@@ -77,6 +88,7 @@ const Navbar = () => {
                     </button>
                 ))}
             </div>
+            <BurgerMenu open={open} setOpen={setOpen} />
         </div>
     );
 };

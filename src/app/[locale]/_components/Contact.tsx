@@ -119,11 +119,11 @@ const Contact = () => {
                     textShadow:
                         "0 0px 20px rgba(255, 255, 255, 0.35), 0 0px 65px rgba(255, 255, 255, 0.2)",
                 }}
-                className="font-medium text-center text-4xl tracking-wide max-md:text-3xl"
+                className="font-semibold text-center text-4xl"
             >
                 - İletişime Geçin -
             </motion.p>
-            <div className="flex w-full px-[20%] gap-10">
+            <div className="flex w-full px-[20%] gap-10 max-md:px-[5%]">
                 <form
                     noValidate
                     onSubmit={send}

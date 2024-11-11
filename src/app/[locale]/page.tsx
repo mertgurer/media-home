@@ -8,7 +8,7 @@ import Welcome from "./_components/Welcome";
 
 export default function Home() {
     return (
-        <main className="flex flex-col min-h-screen items-center justify-center">
+        <main className="flex flex-col min-h-screen items-center justify-center w-full">
             <Welcome />
             <About />
             <Services />
