@@ -119,7 +119,7 @@ const Contact = () => {
                     textShadow:
                         "0 0px 20px rgba(255, 255, 255, 0.35), 0 0px 65px rgba(255, 255, 255, 0.2)",
                 }}
-                className="font-semibold text-center text-4xl"
+                className="font-medium text-center text-4xl"
             >
                 - İletişime Geçin -
             </motion.p>
@@ -193,7 +193,7 @@ const Contact = () => {
                             backgroundColor:
                                 "color-mix(in srgb, var(--primary), transparent 50%)",
                         }}
-                        className={`flex relative items-center gap-2 w-max font-medium text-background py-[12px] px-12 rounded-md mt-8 shadow-[0_0_22px_-10px] shadow-secondary sendButton max-md:text-base ${
+                        className={`flex relative items-center gap-2 w-max font-normal text-background py-[12px] px-12 rounded-md mt-8 shadow-[0_0_22px_-10px] shadow-secondary sendButton max-md:text-base ${
                             loading ? "opacity-60" : "opacity-100"
                         }`}
                     >

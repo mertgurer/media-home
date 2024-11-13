@@ -5,13 +5,19 @@ import { Link } from "@/i18n/routing";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import BurgerMenu from "./components/burgerMenu";
+import { MobileViewPoint } from "@/constants/constants";
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const [activeSection, setActiveSection] = useState<string>("welcome");
     const [open, setOpen] = useState(false);
+    const [isMobileView, setIsMobileView] = useState(false);
 
     useEffect(() => {
+        if (typeof window !== "undefined") {
+            setIsMobileView(window.innerWidth <= MobileViewPoint);
+        }
+
         const handleScroll = () => {
             const sections = Object.values(HomePageSectionIds);
 
@@ -30,16 +36,21 @@ const Navbar = () => {
                 }
             }
 
-            if (window.scrollY > 80) {
-                setScrolled(true);
-            } else {
-                setScrolled(false);
+            setScrolled(window.scrollY > 80);
+        };
+
+        const handleResize = () => {
+            if (typeof window !== "undefined") {
+                setIsMobileView(window.innerWidth <= MobileViewPoint);
             }
         };
 
         window.addEventListener("scroll", handleScroll);
+        window.addEventListener("resize", handleResize);
+
         return () => {
             window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener("resize", handleResize);
         };
     }, []);
 
@@ -51,7 +62,7 @@ const Navbar = () => {
         >
             <Link
                 href={"/"}
-                className="h-3/4 relative aspect-[3] overflow-hidden max-md:h-2/3"
+                className="h-full relative aspect-[3] overflow-hidden max-md:h-2/3"
             >
                 <Image
                     className="object-contain"
@@ -65,11 +76,12 @@ const Navbar = () => {
 
             <div
                 style={{
-                    backgroundColor:
-                        "color-mix(in srgb, var(--text), transparent 20%)",
+                    backgroundColor: isMobileView
+                        ? "color-mix(in srgb, var(--text), transparent 20%)"
+                        : "transparent",
                 }}
                 className={`flex gap-7 z-10 max-md:flex-col max-md:absolute max-md:top-0 max-md:left-0 max-md:w-full max-md:opacity-90 max-md:backdrop-blur-lg max-md:gap-5 max-md:pb-20 max-md:pt-32 max-md:z-30 max-md:duration-500 ${
-                    open ? "translate-y-0" : "-translate-y-full"
+                    open ? "max-md:translate-y-0" : "max-md:-translate-y-full"
                 }`}
             >
                 {Object.values(HomePageSections).map((section) => (
@@ -80,7 +92,7 @@ const Navbar = () => {
                                 .getElementById(section.id)
                                 ?.scrollIntoView({ behavior: "smooth" });
                         }}
-                        className={`font-semibold duration-300 hover:text-primary max-md:text-background max-md:text-2xl ${
+                        className={`font-medium duration-300 hover:text-primary max-md:text-background max-md:text-2xl ${
                             activeSection === section.id ? "text-primary" : ""
                         }`}
                     >

@@ -7,7 +7,7 @@ export default function BurgerMenu({ open, setOpen }: BurgerMenuProps) {
     return (
         <button
             onClick={() => setOpen(!open)}
-            className="flex flex-col gap-1 p-2 z-40"
+            className="flex flex-col gap-1 p-2 z-40 md:hidden"
         >
             <div
                 className={`w-6 h-1 duration-500 ease-in-out ${

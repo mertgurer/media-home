@@ -1,4 +1,4 @@
-import { Quicksand } from "next/font/google";
+import localFont from "next/font/local";
 import { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
@@ -6,9 +6,21 @@ import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/footer/Footer";
 
-const poppins = Quicksand({
-    subsets: ["latin"],
-    weight: ["300", "400", "500", "600", "700"],
+const sfProDisplay = localFont({
+    src: [
+        {
+            path: "../../../public/fonts/sf/SFPRODISPLAYBOLD.otf",
+            weight: "700",
+        },
+        {
+            path: "../../../public/fonts/sf/SFPRODISPLAYMEDIUM.otf",
+            weight: "500",
+        },
+        {
+            path: "../../../public/fonts/sf/SFPRODISPLAYREGULAR.otf",
+            weight: "400",
+        },
+    ],
 });
 
 export const metadata: Metadata = {
@@ -30,7 +42,7 @@ export default async function RootLayout({
 
     return (
         <html lang={locale}>
-            <body className={poppins.className}>
+            <body className={sfProDisplay.className}>
                 <NextIntlClientProvider messages={messages}>
                     <Navbar />
                     {children}

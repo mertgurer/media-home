@@ -15,21 +15,21 @@ const Footer = () => {
             >
                 <Link
                     href={"/"}
-                    className="h-1/2 relative aspect-[3] overflow-hidden max-md:hidden"
+                    className="h-2/3 relative aspect-[1.5] overflow-hidden rounded-md max-md:hidden"
                 >
                     <Image
-                        className="object-contain"
-                        src="/images/logo-text.png"
+                        className="object-cover"
+                        src="/images/logo-square.png"
                         alt=""
                         fill
                         sizes="100%"
                         priority
                     />
                 </Link>
-                <div className="flex text-end gap-20 text-sm font-semibold max-md:flex-col max-md:gap-2 max-md:items-end max-md:w-full max-md:px-[7%] max-md:py-4">
+                <div className="flex text-end gap-20 text-sm font-normal max-md:flex-col max-md:gap-2 max-md:items-end max-md:w-full max-md:px-[7%] max-md:py-4">
                     <div className="flex flex-col items-end max-md:gap-2 max-md:w-full">
                         <div className="flex items-center gap-3">
-                            <p>0532 402 91 52</p>
+                            <p>0216 807 04 63</p>
                             <Phone size={16} strokeWidth={2.5} />{" "}
                         </div>
                         <div className="flex items-center gap-3">

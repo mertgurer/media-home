@@ -7,3 +7,5 @@ export const EMAIL_JS = {
     templateId: "template_w605134",
     publicKey: "JzUNGp4EWrniAzZkq",
 };
+
+export const MobileViewPoint = 768;

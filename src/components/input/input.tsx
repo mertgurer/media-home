@@ -45,7 +45,7 @@ export default function Input({
                         backgroundColor:
                             "color-mix(in srgb, var(--primary), transparent 50%)",
                     }}
-                    className={`rounded-md text-sm font-semibold no-spinner placeholder-gray-700 bg-secondary ${
+                    className={`rounded-md text-sm font-medium no-spinner placeholder-gray-700 bg-secondary ${
                         leftElement ? "ps-12" : undefined
                     } ${type === "password" ? "pr-10" : ""} ${
                         !inline ? "py-[10px] px-5" : "py-4 px-6"
@@ -70,7 +70,7 @@ export default function Input({
                         backgroundColor:
                             "color-mix(in srgb, var(--primary), transparent 50%)",
                     }}
-                    className={`h-full rounded-md text-sm font-semibold placeholder-gray-700 bg-secondary ${
+                    className={`h-full rounded-md text-sm font-medium placeholder-gray-700 bg-secondary ${
                         !inline ? "py-[10px] px-5" : "py-4 px-6"
                     }`}
                     placeholder={inline ? title : ""}

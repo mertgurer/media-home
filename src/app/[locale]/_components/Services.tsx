@@ -14,7 +14,7 @@ const Services = () => {
             }}
             className="w-full flex flex-col items-center justify-center py-20 backdrop-blur-xl gap-4"
         >
-            <p className="text-4xl font-semibold">- Servislerimiz -</p>
+            <p className="text-4xl font-medium">- Hizmetlerimiz -</p>
             <Carousel
                 components={ServicesData.map((item, index) => (
                     <Card

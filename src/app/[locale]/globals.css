@@ -4,15 +4,15 @@
 
 :root {
     /* light values */
-    --background-light: #d6dbdc;
-    --primary-light: #11389a;
+    --background-light: #ffffff;
+    --primary-light: #292561;
     --secondary-light: #538083;
     --tertiary-light: #7e9ff1;
     --text-light: #0d090a;
 
     /* dark values */
-    --background-dark: #d6dbdc;
-    --primary-dark: #11389a;
+    --background-dark: #ffffff;
+    --primary-dark: #292561;
     --secondary-dark: #538083;
     --tertiary-dark: #7e9ff1;
     --text-dark: #0d090a;
