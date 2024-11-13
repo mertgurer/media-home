@@ -9,15 +9,15 @@ import Footer from "@/components/footer/Footer";
 const sfProDisplay = localFont({
     src: [
         {
-            path: "../../../public/fonts/sf/SFPRODISPLAYBOLD.otf",
+            path: "../../../public/fonts/sf/sfprodisplaybold.otf",
             weight: "700",
         },
         {
-            path: "../../../public/fonts/sf/SFPRODISPLAYMEDIUM.otf",
+            path: "../../../public/fonts/sf/sfprodisplaymedium.otf",
             weight: "500",
         },
         {
-            path: "../../../public/fonts/sf/SFPRODISPLAYREGULAR.otf",
+            path: "../../../public/fonts/sf/sfprodisplayregular.otf",
             weight: "400",
         },
     ],
