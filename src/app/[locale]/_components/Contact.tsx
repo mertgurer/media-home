@@ -191,7 +191,7 @@ const Contact = () => {
                         style={{
                             color: "var(--text)",
                             backgroundColor:
-                                "color-mix(in srgb, var(--primary), transparent 50%)",
+                                "color-mix(in srgb, var(--primary), transparent 80%)",
                         }}
                         className={`flex relative items-center gap-2 w-max font-normal text-background py-[12px] px-12 rounded-md mt-8 shadow-[0_0_22px_-10px] shadow-secondary sendButton max-md:text-base ${
                             loading ? "opacity-60" : "opacity-100"

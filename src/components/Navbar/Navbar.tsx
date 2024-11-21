@@ -65,7 +65,7 @@ const Navbar = () => {
                 className="h-full relative aspect-[3] overflow-hidden max-md:h-2/3"
             >
                 <Image
-                    className="object-contain"
+                    className="object-contain scale-125"
                     src="/images/logo-text.png"
                     alt=""
                     fill
@@ -92,8 +92,10 @@ const Navbar = () => {
                                 .getElementById(section.id)
                                 ?.scrollIntoView({ behavior: "smooth" });
                         }}
-                        className={`font-medium duration-300 hover:text-primary max-md:text-background max-md:text-2xl ${
-                            activeSection === section.id ? "text-primary" : ""
+                        className={`font-medium text-lg duration-300 hover:opacity-100 hover:text-primary max-md:text-background max-md:text-2xl ${
+                            activeSection === section.id
+                                ? "opacity-100 text-primary"
+                                : "opacity-80"
                         }`}
                     >
                         {section.title}

@@ -1,3 +1,4 @@
+import { SocialData } from "@/data/socialData";
 import { Link } from "@/i18n/routing";
 import { Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
@@ -9,23 +10,39 @@ const Footer = () => {
             <div
                 style={{
                     backgroundColor:
-                        "color-mix(in srgb, var(--primary), transparent 50%)",
+                        "color-mix(in srgb, var(--primary), transparent 80%)",
                 }}
                 className="w-full h-28 flex justify-between items-center px-40 max-md:px-0 max-md:h-auto"
             >
-                <Link
-                    href={"/"}
-                    className="h-2/3 relative aspect-[1.5] overflow-hidden rounded-md max-md:hidden"
-                >
-                    <Image
-                        className="object-cover"
-                        src="/images/logo-square.png"
-                        alt=""
-                        fill
-                        sizes="100%"
-                        priority
-                    />
-                </Link>
+                <div className="flex items-center h-full gap-20">
+                    <Link
+                        href={"/"}
+                        className="h-2/3 relative aspect-[1.5] overflow-hidden rounded-md max-md:hidden"
+                    >
+                        <Image
+                            className="object-cover"
+                            src="/images/logo-square.png"
+                            alt=""
+                            fill
+                            sizes="100%"
+                            priority
+                        />
+                    </Link>
+                    <div className="flex gap-5">
+                        {SocialData.map((social, index) => (
+                            <Link
+                                key={index}
+                                href={social.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title={social.id}
+                                className="opacity-80 duration-150 hover:scale-105 hover:opacity-100"
+                            >
+                                {social.icon}
+                            </Link>
+                        ))}
+                    </div>
+                </div>
                 <div className="flex text-end gap-20 text-sm font-normal max-md:flex-col max-md:gap-2 max-md:items-end max-md:w-full max-md:px-[7%] max-md:py-4">
                     <div className="flex flex-col items-end max-md:gap-2 max-md:w-full">
                         <div className="flex items-center gap-3">

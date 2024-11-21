@@ -41,9 +41,8 @@ export default function Input({
                     name={id}
                     type={hidden ? type : ""}
                     style={{
-                        color: "var(--text)",
                         backgroundColor:
-                            "color-mix(in srgb, var(--primary), transparent 50%)",
+                            "color-mix(in srgb, var(--primary), transparent 80%)",
                     }}
                     className={`rounded-md text-sm font-medium no-spinner placeholder-gray-700 bg-secondary ${
                         leftElement ? "ps-12" : undefined
@@ -66,9 +65,8 @@ export default function Input({
                 <textarea
                     name={id}
                     style={{
-                        color: "var(--pr)",
                         backgroundColor:
-                            "color-mix(in srgb, var(--primary), transparent 50%)",
+                            "color-mix(in srgb, var(--primary), transparent 80%)",
                     }}
                     className={`h-full rounded-md text-sm font-medium placeholder-gray-700 bg-secondary ${
                         !inline ? "py-[10px] px-5" : "py-4 px-6"

@@ -17,7 +17,7 @@
     right: 0;
     top: 0;
     bottom: 0;
-    border: 2px solid color-mix(in srgb, var(--primary), transparent 50%);
+    border: 2px solid color-mix(in srgb, var(--primary), transparent 80%);
     border-radius: 6px;
     z-index: -1;
 
