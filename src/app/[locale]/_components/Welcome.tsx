@@ -8,7 +8,7 @@ const Welcome = () => {
             id={HomePageSectionIds.WELCOME}
             className="min-h-screen relative w-screen flex items-center justify-center overflow-hidden p-20 max-md:p-0"
         >
-            <div className="absolute h-[80%] mt-20 aspect-square rounded-full overflow-hidden -z-10">
+            <div className="absolute h-[80%] mt-20 aspect-square rounded-2xl ed overflow-hidden -z-10">
                 <Image
                     className="object-contain"
                     src="/images/welcome.jpg"

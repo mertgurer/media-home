@@ -12,7 +12,7 @@ const Footer = () => {
                     backgroundColor:
                         "color-mix(in srgb, var(--primary), transparent 80%)",
                 }}
-                className="w-full h-28 flex justify-between items-center px-40 max-md:px-0 max-md:h-auto"
+                className="w-full h-28 flex justify-between items-center px-40 max-md:px-0 max-md:h-auto max-md:flex-col max-md:py-4"
             >
                 <div className="flex items-center h-full gap-20">
                     <Link
@@ -21,7 +21,7 @@ const Footer = () => {
                     >
                         <Image
                             className="object-cover"
-                            src="/images/logo-square.png"
+                            src="/images/logo-square-black.png"
                             alt=""
                             fill
                             sizes="100%"
