@@ -23,7 +23,7 @@ const Welcome = () => {
                     backgroundColor:
                         "color-mix(in srgb, var(--secondary), transparent 60%)",
                 }}
-                className="flex flex-col w-1/2 text-center text-background backdrop-blur-lg px-10 py-8 rounded-lg gap-4 max-md:w-[92%] max-md:text-center"
+                className="flex flex-col w-1/2 text-center text-background backdrop-blur-lg mt-20 px-10 py-8 rounded-lg gap-4 max-md:w-[92%] max-md:text-center"
             >
                 <p className="font-medium text-5xl max-md:text-4xl">
                     Medya Planlama ve Satın Alma Ajansı
