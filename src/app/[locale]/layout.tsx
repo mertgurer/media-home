@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: "Home Medya",
     description: "Home Medya Web Sitesi",
     icons: {
-        icon: "/images/logo-square.png",
+        icon: "/images/logo.png",
     },
 };
 
