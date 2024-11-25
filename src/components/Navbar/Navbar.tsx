@@ -80,7 +80,7 @@ const Navbar = () => {
                         ? "color-mix(in srgb, var(--text), transparent 20%)"
                         : "transparent",
                 }}
-                className={`flex gap-7 z-10 max-md:flex-col max-md:absolute max-md:top-0 max-md:left-0 max-md:w-full max-md:opacity-90 max-md:backdrop-blur-lg max-md:gap-5 max-md:pb-20 max-md:pt-32 max-md:z-30 max-md:duration-500 ${
+                className={`flex gap-8 z-10 max-md:flex-col max-md:absolute max-md:top-0 max-md:left-0 max-md:w-full max-md:opacity-90 max-md:backdrop-blur-lg max-md:gap-5 max-md:pb-20 max-md:pt-32 max-md:z-30 max-md:duration-500 ${
                     open ? "max-md:translate-y-0" : "max-md:-translate-y-full"
                 }`}
             >
