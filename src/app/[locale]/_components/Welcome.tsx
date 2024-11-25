@@ -8,7 +8,7 @@ const Welcome = () => {
             id={HomePageSectionIds.WELCOME}
             className="min-h-screen relative w-screen flex items-center justify-center overflow-hidden p-20 max-md:p-0"
         >
-            <div className="absolute h-[80%] mt-20 aspect-square rounded-2xl ed overflow-hidden -z-10">
+            <div className="absolute h-[80%] ml-[20%] mt-20 aspect-square rounded-full ed overflow-hidden -z-10">
                 <Image
                     className="object-contain"
                     src="/images/welcome.jpg"
@@ -21,9 +21,9 @@ const Welcome = () => {
             <div
                 style={{
                     backgroundColor:
-                        "color-mix(in srgb, var(--secondary), transparent 60%)",
+                        "color-mix(in srgb, var(--primary), transparent 80%)",
                 }}
-                className="flex flex-col w-1/2 text-center text-background backdrop-blur-lg mt-20 px-10 py-8 rounded-lg gap-4 max-md:w-[92%] max-md:text-center"
+                className="flex flex-col w-1/3 mr-[30%] mt-20 backdrop-blur-lg px-10 py-8 rounded-lg gap-4 max-md:w-[92%] max-md:mr-0 max-md:text-center"
             >
                 <p className="font-medium text-5xl max-md:text-4xl">
                     Medya Planlama ve Satın Alma Ajansı
