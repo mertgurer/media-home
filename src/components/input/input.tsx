@@ -1,7 +1,6 @@
 "use client";
 
 import { Eye, EyeOff } from "lucide-react";
-import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 import { InputProps } from "./types";
 
@@ -20,12 +19,11 @@ export default function Input({
     leftElement,
     rightElement,
 }: InputProps) {
-    const t = useTranslations();
     const [hidden, setHidden] = useState(true);
 
     return (
         <div className="flex flex-col relative gap-2 w-full min-w-0">
-            {!inline && <p className="text-sm text-text">{t(title)}</p>}
+            {!inline && <p className="text-sm text-text">{title}</p>}
             {leftElement && (
                 <div className="absolute left-2 bottom-[2px] p-2 max-md:bottom-[3px]">
                     {leftElement.type === "custom" ? (

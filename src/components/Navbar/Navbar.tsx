@@ -1,11 +1,11 @@
 "use client";
 
 import { HomePageSectionIds, HomePageSections } from "@/data/homePageSections";
-import { Link } from "@/i18n/routing";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import BurgerMenu from "./components/burgerMenu";
 import { MobileViewPoint } from "@/constants/constants";
+import Link from "next/link";
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);

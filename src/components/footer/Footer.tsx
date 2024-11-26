@@ -1,7 +1,7 @@
 import { SocialData } from "@/data/socialData";
-import { Link } from "@/i18n/routing";
 import { Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
