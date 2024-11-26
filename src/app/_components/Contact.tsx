@@ -70,10 +70,10 @@ const Contact = () => {
         e.preventDefault();
 
         const form = e.currentTarget as HTMLFormElement;
-        const email = (form["email"] as HTMLInputElement).value;
-        const name = (form["nameSurname"] as HTMLInputElement).value;
+        const email = (form["user_email"] as HTMLInputElement).value;
+        const name = (form["user_email"] as HTMLInputElement).value;
         const subject = (form["subject"] as HTMLInputElement).value;
-        const message = (form["message"] as HTMLInputElement).value;
+        const message = (form["user_message"] as HTMLInputElement).value;
 
         if (!email && !name && !subject && !message) return;
 
@@ -138,7 +138,7 @@ const Contact = () => {
                                 className="w-full"
                             >
                                 <Input
-                                    id="nameSurname"
+                                    id="user_name"
                                     title="İsim Soyisim*"
                                     inline
                                     dark
@@ -151,7 +151,7 @@ const Contact = () => {
                                 className="w-full"
                             >
                                 <Input
-                                    id="email"
+                                    id="user_email"
                                     title="E-posta*"
                                     type="email"
                                     inline
@@ -174,7 +174,7 @@ const Contact = () => {
                             className="flex w-full"
                         >
                             <Input
-                                id="message"
+                                id="user_message"
                                 title="Mesaj*"
                                 type="textarea"
                                 inline

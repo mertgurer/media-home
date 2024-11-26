@@ -3,7 +3,7 @@ export const REGEX = {
 };
 
 export const EMAIL_JS = {
-    serviceId: "service_qu18p79",
+    serviceId: "service_n2coyk9",
     templateId: "template_w605134",
     publicKey: "JzUNGp4EWrniAzZkq",
 };
