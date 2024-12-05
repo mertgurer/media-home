@@ -71,7 +71,7 @@ const Contact = () => {
 
         const form = e.currentTarget as HTMLFormElement;
         const email = (form["user_email"] as HTMLInputElement).value;
-        const name = (form["user_email"] as HTMLInputElement).value;
+        const name = (form["user_name"] as HTMLInputElement).value;
         const subject = (form["subject"] as HTMLInputElement).value;
         const message = (form["user_message"] as HTMLInputElement).value;
 
@@ -98,6 +98,8 @@ const Contact = () => {
             );
 
             form.reset();
+
+            alert("Mesajınız başarıyla gönderildi.");
 
             setLoading(false);
         } catch (error) {
